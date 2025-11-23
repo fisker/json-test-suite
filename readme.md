@@ -33,7 +33,7 @@ console.log(parsing)
 //     name: 'i_number_double_huge_neg_exp.json',
 //     input: '[123.456e-789]'
 //   },
-// ...
+//   ...,
 // ]
 
 console.log(transform)
@@ -43,6 +43,6 @@ console.log(transform)
 //     name: 'number_-9223372036854775808.json',
 //     input: '[-9223372036854775808]\n'
 //   },
-// ...
+//   ...,
 // ]
 ```
