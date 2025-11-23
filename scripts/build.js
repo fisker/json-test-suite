@@ -74,26 +74,4 @@ await Promise.all([
       )
       .join('\n'),
   ),
-
-  writeTextFile(
-    new URL('../index.d.ts', import.meta.url),
-    features
-      .map((feature) =>
-        feature === 'parsing'
-          ? outdent`
-            export const ${feature}: {
-              readonly name: string,
-              readonly error?: boolean,
-              readonly input: string,
-            }[]
-          `
-          : outdent`
-            export const ${feature}: {
-              readonly name: string,
-              readonly input: string,
-            }[]
-          `,
-      )
-      .join('\n\n'),
-  ),
 ])

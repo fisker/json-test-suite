@@ -1,10 +1,22 @@
 import {expectType, expectError} from 'tsd'
 import {parsing, transform} from './index.js'
 
-expectType<string>(parsing[0].name)
-expectType<string>(parsing[0].input)
-expectType<boolean | undefined>(parsing[0].error)
+for (const testCase of parsing) {
+  expectType<string>(testCase.input)
 
-expectType<string>(transform[0].name)
-expectType<string>(transform[0].input)
-expectError(transform[0].error)
+  if ('error' in testCase) {
+    if (testCase.error){
+      expectType<`n_${string}`>(testCase.name)
+    } else {
+      expectType<`y_${string}`>(testCase.name)
+    }
+  } else {
+    expectType<`i_${string}`>(testCase.name)
+  }
+}
+
+for (const testCase of transform) {
+  expectType<string>(testCase.name)
+  expectType<string>(testCase.input)
+  expectError(transform[0].error)
+}

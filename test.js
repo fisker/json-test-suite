@@ -2,7 +2,8 @@ import assert from 'node:assert/strict'
 import test from 'node:test'
 import * as jsonTestSuite from './index.js'
 
-for (const feature of ['parsing', 'transform']) {
+const features = /** @type {const} */ (['parsing', 'transform'])
+for (const feature of features) {
   test(feature, () => {
     const testCases = jsonTestSuite[feature]
 
