@@ -5,7 +5,7 @@ for (const testCase of parsing) {
   expectType<string>(testCase.input)
 
   if ('error' in testCase) {
-    if (testCase.error){
+    if (testCase.error) {
       expectType<`n_${string}`>(testCase.name)
     } else {
       expectType<`y_${string}`>(testCase.name)
