@@ -1,7 +1,4 @@
 import assert from 'node:assert'
-import {inspect} from 'node:util'
-import {outdent} from 'outdent'
-import {parse} from 'yaml'
 import {downloadFile, readZipFile, writeTextFile} from './utilities.js'
 
 const ZIP_URL =
