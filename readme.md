@@ -46,3 +46,7 @@ console.log(transform)
 //   ...,
 // ]
 ```
+
+## Acknowledgments
+
+Special thanks to [@utkarshkukreti](https://github.com/utkarshkukreti) for graciously transferring the `json-test-suite` name.
